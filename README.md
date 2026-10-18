@@ -1,4 +1,4 @@
-# TechShop — Frontend E-Commerce con Next.js 16, TypeScript & Laravel 12 API
+# Denis Josué Vásquez Rodríguez
 
 Aplicación web e-commerce de alto rendimiento desarrollada para actividad evaluada universitaria, implementando una arquitectura moderna basada en **Next.js 16 (App Router)**, **TypeScript estricto**, **Tailwind CSS v4**, **Server Components**, **Server Actions**, **Route Handlers** para cookies de autenticación `httpOnly`, y pasarela de pagos con **Stripe Payment Intents**.
 
