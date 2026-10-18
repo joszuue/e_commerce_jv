@@ -64,6 +64,7 @@ AUTH_EXCHANGE_SECRET=internal_super_secure_vault_secret_change_in_production
 | Comando | Descripción |
 | :--- | :--- |
 | `npm run dev` | Inicia el servidor de desarrollo en `http://localhost:3000`. |
+| `npm run api` | Inicia el servidor API REST PHP local en `http://localhost:8000`. |
 | `npm run type-check` | Ejecuta la comprobación estricta de tipos de TypeScript (`tsc --noEmit`). |
 | `npm run build` | Genera la compilación optimizada de producción. |
 | `npm run start` | Inicia el servidor de producción en `http://localhost:3000`. |

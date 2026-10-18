@@ -14,19 +14,23 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   // Load from localStorage after mount to prevent hydration mismatch
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem(CART_STORAGE_KEY);
-      if (stored) {
-        const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed)) {
-          setItems(parsed);
+    const timer = setTimeout(() => {
+      try {
+        const stored = localStorage.getItem(CART_STORAGE_KEY);
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed)) {
+            setItems(parsed);
+          }
         }
+      } catch {
+        // Fallback gracefully on storage error
+      } finally {
+        setIsHydrated(true);
       }
-    } catch {
-      // Fallback gracefully on storage error
-    } finally {
-      setIsHydrated(true);
-    }
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, []);
 
   // Save to localStorage whenever items change, only after initial hydration

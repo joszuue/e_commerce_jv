@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ShoppingCart, User as UserIcon, Menu, X, LogOut, Package, Store } from 'lucide-react';
+import { ShoppingCart, Menu, X, LogOut, Package, Store } from 'lucide-react';
 import { useCart } from '../providers/CartProvider';
 import { User } from '@/types/auth';
 
@@ -20,6 +20,14 @@ export function NavbarClient({ user }: NavbarClientProps) {
 
   return (
     <header className="sticky top-0 z-50 glass-header">
+      {/* Top Academic Banner */}
+      <div className="bg-slate-950/95 border-b border-slate-800/80 py-1.5 px-4 text-center text-xs text-slate-400">
+        <span className="font-semibold text-white tracking-wide">Denis Josué Vásquez Rodríguez</span>
+        <span className="mx-2 text-slate-600 hidden sm:inline">|</span>
+        <span className="text-blue-400 font-medium block sm:inline mt-0.5 sm:mt-0">
+          Optimización Avanzada de Rendimiento: Dominio de Web Vitals y Mutaciones Asíncronas en el Servidor
+        </span>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

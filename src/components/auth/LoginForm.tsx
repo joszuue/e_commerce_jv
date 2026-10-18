@@ -16,6 +16,8 @@ export function LoginForm() {
   // When Server Action succeeds and returns exchange ticket, hand off to Route Handler
   useEffect(() => {
     if (state?.success && state.exchangeTicket) {
+      // Full navigation required so the browser processes the Route Handler's Set-Cookie response
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination
       window.location.href = `/api/auth/set-cookie?ticket=${encodeURIComponent(
         state.exchangeTicket
       )}&next=${encodeURIComponent(state.redirectTo || next)}`;

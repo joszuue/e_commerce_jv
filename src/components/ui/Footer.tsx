@@ -39,12 +39,15 @@ export function Footer() {
 
         {/* Footer Links & Credits */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-blue-600 flex items-center justify-center text-white font-bold">
-              <Store className="w-3.5 h-3.5" />
+          <div className="flex flex-col sm:flex-row items-center gap-2">
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 rounded bg-blue-600 flex items-center justify-center text-white font-bold">
+                <Store className="w-3.5 h-3.5" />
+              </div>
+              <span className="font-semibold text-white">TechShop E-Commerce</span>
             </div>
-            <span className="font-semibold text-white">TechShop E-Commerce</span>
-            <span className="text-slate-500">| Actividad Académica Full Stack</span>
+            <span className="text-slate-500 hidden sm:inline">|</span>
+            <span className="text-slate-400">Denis Josué Vásquez Rodríguez</span>
           </div>
           <div className="flex items-center gap-6">
             <Link href="/catalogo" className="hover:text-white transition">
@@ -57,9 +60,6 @@ export function Footer() {
               Mi Cuenta
             </Link>
           </div>
-          <p className="text-slate-500">
-            &copy; {new Date().getFullYear()} TechShop. Desarrollado con Next.js 16 & Laravel 12 API.
-          </p>
         </div>
       </div>
     </footer>

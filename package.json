@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "api": "php -S 127.0.0.1:8000 api_server/server.php",
     "lint": "eslint",
     "type-check": "tsc --noEmit"
   },
